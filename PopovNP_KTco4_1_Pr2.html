@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   /* стили формы */ 
+  </style>
+</head>
+<body>
+
+  <form id="register-form">
+
+    <h1>Регистрация</h1>
+
+    <label for="name">Имя:</label>
+    <input type="text" id="name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email">
+
+    <label for="password">Пароль:</label>
+    <input type="password" id="password">
+
+    <button type="submit">Зарегистрироваться</button>
+
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    const form = document.getElementById('register-form');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = form.name.value;
+      const email = form.email.value;
+      const password = form.password.value;
+      
+      // имитация успешной регистрации
+      result.innerHTML = `<p>Пользователь ${name} успешно зарегистрирован!</p>`;
+
+      // очистка формы
+      form.reset(); 
+    });
+  </script>
+
+</body>
+</html>
